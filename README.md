@@ -1,4 +1,5 @@
 ## lies.db
+get random lies [hasantayyar.github.io/lies](http://hasantayyar.github.io/lies/)
 
 - This is hacky, but I'll fix it soon.
 - This task will be easy.
