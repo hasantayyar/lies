@@ -1,1 +1,57 @@
-lies
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body{margin:0;font-family:Arial}
+    .tran{-webkit-transition:all .2s ease-in-out;-moz-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out}
+    .shadow{-webkit-box-shadow:0 1px 1px 0 rgba(0,0,102,.2);-moz-box-shadow:0 1px 1px 0 rgba(0,0,102,.2);box-shadow:0 1px 1px 0 rgba(0,0,102,.1)}
+    .canvas{width:100%;padding-bottom:100%;position:relative}
+    .place{position:fixed;width:100%;height:100%;}
+    .place span{position:relative;text-align:center;display:block;bottom:0;color:#fff;text-transform:uppercase;background-color:rgba(0,0,0,.1);padding:3px 6px;border-radius:0 3px 0 0; margin:10% auto; width:300px; height:40px; color:#fff;font-size:12px; border-radius: 4px}
+    #lie{height:100%}
+  </style>
+  </head>
+<body>
+
+  <div class="item tran">
+    <div class = "canvas" >
+      <div class="place tran" id="lie"><span class="tran"></span></div>
+    </div>
+  </div >
+
+  <script>
+    var lies = [
+      "This is hacky, but I'll fix it soon.",
+      "This task will be easy.",
+      "I'm almost done.",
+      "If there's a bug, it can't possibly be in my code.",
+      "I'll add the Unit Test case in the next release.",
+      "I'll comment and document my code later.",
+      "It's not a bug, it's a feature.",
+      "I will finish it by evening it's almost done.",
+      "Works on my machine",
+      "It's 90% done",
+      "I'm deeply investigating requirements. Will start development soon.",
+      "It's just a temporary solution, it won't be used in production.",
+      "I'll add it to the TODO list",
+      "I think it's a browser issue.",
+      "I will start from monday",
+      "It's done just remained testing",
+      "This is easy, it will take a week.",
+      "It was working yesterday, but have not idea, why it isn't working right now!",
+      "I can handle it. No worries !!",
+      "It's the user's fault!",
+      "Works perfectly on my system, may be your systems fault",
+      "It's just a temporary solution, it won't be used in production.",
+      "That's easy, it'll just take a couple of days."
+    ];
+    var r = function(d){ return Math.floor(Math.random() * d.length) };
+    var colors = ['F8CACC','D9BFCB','A9AECE','96ACD9','8DA4D0'];
+    var randc = colors[r(colors)];
+    var e = document.getElementById("lie");
+    document.querySelector("#lie span").innnerHTML = lies[r(lies)];
+
+    e.style.backgroundColor = "#" + randc;
+  </script>
+</body>
+</html>
